@@ -15,6 +15,10 @@ const upload = multer({
   limits: { fileSize: 100000000000000 },
 }).single('file');
 
+app.get("/", (req, res)=>{
+  res.send("lorem")
+})
+
 app.post('/upload', (req, res) => {
   upload(req, res, (err) => {
     if (err) {
