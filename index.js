@@ -16,7 +16,7 @@ const upload = multer({
 }).single('file');
 
 app.get("/", (req, res)=>{
-  res.send("lorem")
+  res.send("<h1>lorem</h1>")
 })
 
 app.post('/upload', (req, res) => {
